@@ -24,7 +24,7 @@ public class ProfessorMapperImpl implements ProfessorMapper {
             .fotoPerfil(professor.getFotoPerfil())
             .createdAt(professor.getCreatedAt())
             .updatedAt(professor.getUpdatedAt())
-            .build()
+            .build();
     }
 
 }
