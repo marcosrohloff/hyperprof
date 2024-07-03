@@ -8,4 +8,5 @@ spring:
   jpa:
     show-sql: true
     properties:
-      "[format_sql]": true
+      hibernate:
+        format_sql: true
