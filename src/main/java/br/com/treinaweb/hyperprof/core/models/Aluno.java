@@ -43,8 +43,8 @@ public class Aluno extends Auditable {
     @Column(name = "data_aula")
     private LocalDateTime dataAula;
 
+    @JoinColumn(name = "professor_id")
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "professor_id")    
     private Professor professor;
 
 }

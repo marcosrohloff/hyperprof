@@ -6,7 +6,7 @@ import br.com.treinaweb.hyperprof.core.models.Aluno;
 
 public interface AlunoMapper {
 
-    AlunoResponse toAlunoResponse(Aluno aluno);
     Aluno toAluno(AlunoRequest alunoRequest);
-
+    AlunoResponse toAlunoResponse(Aluno aluno);
+    
 }

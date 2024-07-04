@@ -16,12 +16,12 @@ public class AlunoMapperImpl implements AlunoMapper {
         }
 
         return Aluno.builder()
-        .nome(alunoRequest.getNome())
-        .email(alunoRequest.getEmail())
-        .dataAula(alunoRequest.getDataAula())
-        .build();
-
+            .nome(alunoRequest.getNome())
+            .email(alunoRequest.getEmail())
+            .dataAula(alunoRequest.getDataAula())
+            .build();
     }
+
     @Override
     public AlunoResponse toAlunoResponse(Aluno aluno) {
         if (aluno == null) {
@@ -29,13 +29,13 @@ public class AlunoMapperImpl implements AlunoMapper {
         }
 
         return AlunoResponse.builder()
-        .id(aluno.getId())
-        .nome(aluno.getNome())
-        .email(aluno.getEmail())
-        .dataAula(aluno.getDataAula())
-        .createdAt(aluno.getCreatedAt())
-        .updatedAt(aluno.getUpdatedAt())
-        .build();
+            .id(aluno.getId())
+            .nome(aluno.getNome())
+            .email(aluno.getEmail())
+            .dataAula(aluno.getDataAula())
+            .createdAt(aluno.getCreatedAt())
+            .updatedAt(aluno.getUpdatedAt())
+            .build();
     }
 
 }

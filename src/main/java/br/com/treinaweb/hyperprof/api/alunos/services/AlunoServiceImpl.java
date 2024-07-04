@@ -20,10 +20,11 @@ public class AlunoServiceImpl implements AlunoService {
 
     @Override
     public AlunoResponse cadastrarAluno(AlunoRequest alunoRequest, Long professorId) {
-        var professor = professorRepository.findById(professorId).orElseThrow(ProfessorNotFoundException::new);
-        var alunoCadastrar = alunoMapper.toAluno(alunoRequest);
-        alunoCadastrar.setProfessor(professor);
-        var alunoCadastrado = alunoRepository.save(alunoCadastrar);
+        var professor = professorRepository.findById(professorId)
+            .orElseThrow(ProfessorNotFoundException::new);
+        var alunoParaCadastrar = alunoMapper.toAluno(alunoRequest);
+        alunoParaCadastrar.setProfessor(professor);
+        var alunoCadastrado = alunoRepository.save(alunoParaCadastrar);
         return alunoMapper.toAlunoResponse(alunoCadastrado);
     }
 
